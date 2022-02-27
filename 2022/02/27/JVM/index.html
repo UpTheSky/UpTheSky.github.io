@@ -16,12 +16,12 @@
   <meta name="author" content="upthesky">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本博客是根据解密JVM【黑马程序员出品】教学视频学习时，所做的笔记 一、什么是JVM定义Java Virtual Machine，JAVA程序的运行环境（JAVA二进制字节码的运行环境） 好处 一次编写，到处运行 自动内存管理，垃圾回收机制 数组下标越界检查  比较JVM JRE JDK的区别  二、内存结构整体架构 1、程序计数器作用用于保存JVM中下一条所要执行的指令的地址 特点 线程私有 C">
+    <meta name="description" content="JVM学习本博客是根据解密JVM【黑马程序员出品】教学视频学习时，所做的笔记 一、什么是JVM定义Java Virtual Machine，JAVA程序的运行环境（JAVA二进制字节码的运行环境） 好处 一次编写，到处运行 自动内存管理，垃圾回收机制 数组下标越界检查  比较JVM JRE JDK的区别  二、内存结构整体架构 1、程序计数器作用用于保存JVM中下一条所要执行的指令的地址 特点 线">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JVM学习">
-<meta property="og:url" content="http://example.com/2022/02/27/JVM%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="JVM">
+<meta property="og:url" content="http://example.com/2022/02/27/JVM/index.html">
 <meta property="og:site_name" content="Upthesky&#39;s Blog">
-<meta property="og:description" content="本博客是根据解密JVM【黑马程序员出品】教学视频学习时，所做的笔记 一、什么是JVM定义Java Virtual Machine，JAVA程序的运行环境（JAVA二进制字节码的运行环境） 好处 一次编写，到处运行 自动内存管理，垃圾回收机制 数组下标越界检查  比较JVM JRE JDK的区别  二、内存结构整体架构 1、程序计数器作用用于保存JVM中下一条所要执行的指令的地址 特点 线程私有 C">
+<meta property="og:description" content="JVM学习本博客是根据解密JVM【黑马程序员出品】教学视频学习时，所做的笔记 一、什么是JVM定义Java Virtual Machine，JAVA程序的运行环境（JAVA二进制字节码的运行环境） 好处 一次编写，到处运行 自动内存管理，垃圾回收机制 数组下标越界检查  比较JVM JRE JDK的区别  二、内存结构整体架构 1、程序计数器作用用于保存JVM中下一条所要执行的指令的地址 特点 线">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://nyimapicture.oss-cn-beijing.aliyuncs.com/img/20200608150422.png">
 <meta property="og:image" content="https://nyimapicture.oss-cn-beijing.aliyuncs.com/img/20200608150440.png">
@@ -97,15 +97,15 @@
 <meta property="og:image" content="https://nyimapicture.oss-cn-beijing.aliyuncs.com/img/20201118204542.png">
 <meta property="og:image" content="https://nyimapicture.oss-cn-beijing.aliyuncs.com/img/20200614133554.png">
 <meta property="og:image" content="https://nyimapicture.oss-cn-beijing.aliyuncs.com/img/20200614135011.png">
-<meta property="article:published_time" content="2022-02-27T13:38:14.000Z">
-<meta property="article:modified_time" content="2022-02-27T13:39:33.300Z">
+<meta property="article:published_time" content="2022-02-27T15:31:17.000Z">
+<meta property="article:modified_time" content="2022-02-27T15:46:01.907Z">
 <meta property="article:author" content="upthesky">
-<meta property="article:tag" content="jvm">
+<meta property="article:tag" content="Upthesky">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://nyimapicture.oss-cn-beijing.aliyuncs.com/img/20200608150422.png">
   
   
-  <title>JVM学习 - Upthesky&#39;s Blog</title>
+  <title>JVM - Upthesky&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -251,7 +251,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="JVM学习">
+            <span class="h2" id="subtitle" title="JVM">
               
             </span>
 
@@ -261,7 +261,7 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-02-27 21:38" pubdate>
+      <time datetime="2022-02-27 23:31" pubdate>
         2022年2月27日 晚上
       </time>
     </span>
@@ -310,10 +310,10 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">JVM学习</h1>
+            <h1 style="display: none">JVM</h1>
             
             <div class="markdown-body">
-              <p>本博客是根据<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1yE411Z7AP"><strong>解密JVM【黑马程序员出品】</strong></a>教学视频学习时，所做的笔记</p>
+              <h1 id="JVM学习"><a href="#JVM学习" class="headerlink" title="JVM学习"></a>JVM学习</h1><p>本博客是根据<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1yE411Z7AP"><strong>解密JVM【黑马程序员出品】</strong></a>教学视频学习时，所做的笔记</p>
 <h2 id="一、什么是JVM"><a href="#一、什么是JVM" class="headerlink" title="一、什么是JVM"></a>一、什么是JVM</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>Java Virtual Machine，JAVA程序的<strong>运行环境</strong>（JAVA二进制字节码的运行环境）</p>
 <h3 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h3><ul>
 <li>一次编写，到处运行</li>
@@ -1360,7 +1360,7 @@
 </li>
 </ul>
 <p><a target="_blank" rel="noopener" href="https://nyimapicture.oss-cn-beijing.aliyuncs.com/img/20200614135011.png"><img src="https://nyimapicture.oss-cn-beijing.aliyuncs.com/img/20200614135011.png" srcset="/img/loading.gif" lazyload alt="img"></a></p>
-<h2 id="五、内存模型"><a href="#五、内存模型" class="headerlink" title="五、内存模型"></a>五、内存模型</h2><p>内存模型内容详见 <a target="_blank" rel="noopener" href="https://nyimac.gitee.io/2020/06/08/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/#%E5%9B%9B%E3%80%81%E5%85%B1%E4%BA%AB%E6%A8%A1%E5%9E%8B%E4%B9%8B%E5%86%85%E5%AD%98">JAVA并发 第四章</a></p>
+<h2 id="五、内存模型"><a href="#五、内存模型" class="headerlink" title="五、内存模型"></a>五、内存模型</h2><p>内存模型内容详见 [JAVA并发 第四章]</p>
 
             </div>
             <hr>
@@ -1371,7 +1371,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/jvm/">jvm</a>
+                      <a class="hover-with-bg" href="/tags/Upthesky/">Upthesky</a>
                     
                   </div>
                 
